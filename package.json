@@ -2,20 +2,15 @@
   "name": "express-ts",
   "version": "0.0.0",
   "description": "Project Node.JS + Typescript + Webpack + PostgreSQL + Express.JS",
+  "author": "Douglas Dennys <douglasdennys91@gmail.com>",
   "main": "dist/index.js",
+  "license": "MIT",
+  "private": false,
   "scripts": {
+    "start": "node dist/index.js",
     "dev": "nodemon --watch \"src/**/*\" -e ts --exec ts-node ./src/index.ts",
     "test": "jest"
   },
-  "keywords": [
-    "Node.JS",
-    "Express.JS",
-    "PostgreSQL",
-    "TypeScript",
-    "Webpack"
-  ],
-  "author": "Douglas Dennys <douglasdennys45@gmail.com>",
-  "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.519.0",
     "cors": "^2.8.5",
@@ -54,5 +49,12 @@
     "typescript": "^3.5.3",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
-  }
+  },
+  "keywords": [
+    "Node.JS",
+    "Express.JS",
+    "PostgreSQL",
+    "TypeScript",
+    "Webpack"
+  ]
 }
