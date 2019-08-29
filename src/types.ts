@@ -2,9 +2,9 @@
  * Types Schemas MongoDB
  */
 enum Situation {
-  ACTIVE = 'active',
-  INACTIVE = 'inactive',
-  PENDING = 'pending',
+  ACTIVE = "active",
+  INACTIVE = "inactive",
+  PENDING = "pending"
 }
 
 interface BaseDate {

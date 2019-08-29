@@ -1,3 +1,3 @@
-import * as helmet from 'helmet';
+import helmet from "helmet";
 
 export default helmet();

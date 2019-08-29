@@ -1,5 +1,5 @@
-import { ObjectId } from 'mongodb';
-import humps from 'humps';
+import { ObjectId } from "mongodb";
+import humps from "humps";
 
 export const createPlainToDbMapper = (keysToMap: string[]) => (obj: {
   [key: string]: any;
@@ -13,8 +13,8 @@ export const createPlainToDbMapper = (keysToMap: string[]) => (obj: {
   const result = keysToMap.reduce(
     (acc, key) => {
       if (obj[key] !== undefined && obj[key] !== null) {
-        if (key === 'id') {
-          acc['_id'] = new ObjectId(obj[key]);
+        if (key === "id") {
+          acc["_id"] = new ObjectId(obj[key]);
         } else {
           acc[key] = new ObjectId(obj[key]);
         }
@@ -37,8 +37,8 @@ export const createDbToPlainMapper = (keysToMap: string[]) => (obj: {
   const result = keysToMap.reduce(
     (acc, key) => {
       if (obj[key] !== undefined && obj[key] !== null) {
-        if (key === '_id') {
-          acc['id'] = obj[key].toString();
+        if (key === "_id") {
+          acc["id"] = obj[key].toString();
         } else {
           acc[key] = obj[key].toString();
         }
