@@ -1,0 +1,34 @@
+version: "3"
+
+volumes:
+  db-data:
+    driver: local
+
+services:
+  app:
+    image: node:10.16.3-alpine
+    container_name: app
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 3030:3030
+    command: "npm run dev"
+    networks:
+      - app-network
+    links:
+      - db
+
+  db:
+    image: mongo:4.2
+    container_name: db
+    volumes:
+      - db-data:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
